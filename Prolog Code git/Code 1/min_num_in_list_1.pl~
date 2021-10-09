@@ -1,0 +1,8 @@
+Minimum number:
+
+minl([Only], Only).
+minl([Head|Tail], Minimum) :-
+minl(Tail, TailMin),
+Minimum is min(Head, TailMin).
+
+Input  =  minl([4,5,1,2,9],X).

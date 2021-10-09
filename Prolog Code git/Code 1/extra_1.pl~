@@ -1,0 +1,11 @@
+%:- use_module(library(clpfd)).
+
+digits_reversed(N,X) :-
+   digits_reversed_(N,X,0).
+
+digits_reversed_(0,R,R).
+digits_reversed_(N,X,R) :-
+   N #> 0,
+   N0 #= N/10,
+   R1 #= R*10 + (N mod 10),
+   digits_reversed_(N0,X,R1).
