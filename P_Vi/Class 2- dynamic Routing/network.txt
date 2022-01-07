@@ -1,0 +1,39 @@
+Switch commands:
+EN
+show mac-address-table
+
+router dhcp:
+en
+conf t
+int gig0/0
+ip dhcp pool DHCP
+network 192.168.105.0 255.255.255.0
+default-router 192.168.105.1
+
+router config:
+en
+conf t
+int gig0/0
+ip address 192.168.0.1 255.255.255.0
+no shut
+exit
+int gig1/0
+ip address 192.168.100.1 255.255.255.0
+no shut
+exit
+
+Dynanic Routings:
+
+ospf setup on router:
+router ospf 2
+network 192.168.110.0 0.0.0.255 area 1
+network 192.168.120.0 0.0.0.255 area 1
+network 192.168.30.0 0.0.0.255 area 1
+exit
+
+rip setup on router:
+router rip
+network 192.168.10.0
+network 192.168.100.0
+network 192.168.120.0
+exit

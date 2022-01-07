@@ -1,0 +1,32 @@
+rip setup on router:
+router rip
+network 192.168.10.0
+network 192.168.100.0
+network 192.168.120.0
+exit
+
+--------------------
+1.
+
+router rip
+network 192.168.10.0
+network 192.168.100.0
+network 192.168.120.0
+exit
+
+
+2.
+
+router rip
+network 192.168.20.0
+network 192.168.100.0
+network 192.168.110.0
+exit
+
+3.
+
+router rip
+network 192.168.30.0
+network 192.168.110.0
+network 192.168.120.0
+exit

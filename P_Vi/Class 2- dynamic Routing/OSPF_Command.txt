@@ -1,0 +1,30 @@
+Dynanic Routings:
+
+ospf setup on router:
+1.
+
+router ospf 1
+network 192.168.10.0 0.0.0.255 area 1
+network 192.168.100.0 0.0.0.255 area 1
+network 192.168.120.0 0.0.0.255 area 1
+exit
+
+
+----
+2.
+
+router ospf 2
+network 192.168.100.0 0.0.0.255 area 1
+network 192.168.110.0 0.0.0.255 area 1
+network 192.168.20.0 0.0.0.255 area 1
+exit
+
+----
+
+3.
+
+router ospf 3
+network 192.168.30.0 0.0.0.255 area 1
+network 192.168.110.0 0.0.0.255 area 1
+network 192.168.120.0 0.0.0.255 area 1
+exit
