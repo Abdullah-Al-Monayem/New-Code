@@ -1,0 +1,110 @@
+For R1:
+
+en
+config t
+hostname HQ
+enable secret 12
+int f0/0
+ip add 192.168.2.129 255.255.255.192
+no sh 
+
+
+int Se2/0
+ip add 192.168.2.225 255.255.255.252
+no sh 
+exit
+
+
+int Se3/0
+ip add 192.168.2.229 255.255.255.252
+no sh 
+exit
+
+
+en
+12
+conf t
+
+
+
+
+[network address - mask - next hop address ] for ip route format
+[ip address subnet mask ] for router port configure format
+
+
+----------
+---------
+
+
+For R2:
+
+en
+config t
+hostname B1
+enable secret 12
+int f0/0
+ip add 192.168.2.1 255.255.255.128
+no sh 
+
+
+int Se2/0
+ip add 192.168.2.226 255.255.255.252
+no sh 
+exit
+
+
+
+
+en
+12
+conf t
+
+
+
+
+[network address - mask - next hop address ] for ip route format
+[ip address subnet mask ] for router port configure format
+
+
+----------
+---------
+
+
+
+For R3:
+
+en
+config t
+hostname B2
+enable secret 12
+int f0/0
+ip add 192.168.2.193 255.255.255.224
+no sh 
+
+
+int Se3/0
+ip add 192.168.2.230 255.255.255.252
+no sh 
+exit
+
+
+
+
+en
+12
+conf t
+
+
+
+
+[network address - mask - next hop address ] for ip route format
+[ip address subnet mask ] for router port configure format
+
+
+----------
+---------
+
+
+@@abdullah321@
+@@abdullah321@
+

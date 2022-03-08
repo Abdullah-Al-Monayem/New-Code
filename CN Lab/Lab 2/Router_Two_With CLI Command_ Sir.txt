@@ -1,0 +1,105 @@
+For R1:
+
+en
+conf t
+hostname R1
+enable secret 12
+int f0/0
+ip add 192.168.1.10 255.255.255.0
+no sh 
+exit
+exit
+exit
+
+en
+12
+conf t
+line vty 0 5
+password mona1
+login
+end
+
+en
+12
+conf t
+
+int Se2/0
+ip add 192.168.0.1 255.255.255.0
+no sh 
+exit
+
+
+en
+12
+conf t
+
+ip route 192.168.2.0 255.255.255.0 192.168.0.2
+exit
+exit
+
+
+
+[network address - mask - next hop address ] for ip route format
+[ip address subnet mask ] for router port configure format
+
+
+----------
+---------
+
+For R2:
+
+en
+conf t
+hostname R2
+enable secret 12
+int f0/0
+ip add 192.168.2.20 255.255.255.0
+no sh 
+exit
+exit
+exit
+
+
+en
+12
+conf t
+line vty 0 5
+password mona2
+login
+end
+
+en
+12
+conf t
+
+int Se2/0
+ip add 192.168.0.2 255.255.255.0
+no sh 
+exit
+
+
+en
+12
+conf t
+
+ip route 192.168.1.0 255.255.255.0 192.168.0.1
+exit
+exit
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
